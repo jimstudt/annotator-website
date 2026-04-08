@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image ML Annotator</title>
+    <meta
+        name="description"
+        content="Image ML Annotator is a macOS app for labeling images with rectangles, assisted by an object detector."
+    >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">macOS image labeling</p>
+            <h1>Train faster with a detector-assisted labeling workflow.</h1>
+            <p class="hero-text">
+                Image ML Annotator helps you turn raw image folders into structured training data.
+                Bring your own Core ML detector, step through proposed rectangles, and promote the
+                ones you want into real annotations.
+            </p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://apps.apple.com/us/" target="_blank" rel="noreferrer">
+                    View on the Mac App Store
+                </a>
+                <a class="button button-secondary" href="#workflow">
+                    See the workflow
+                </a>
+            </div>
+            <p class="hero-note">
+                Current example workflow uses the <strong>PuppyKittenDuckling</strong> object detector, but you can use whatever you want – or train your own with Create ML.
+            </p>
+        </div>
+        <div class="hero-art">
+            <div class="icon-frame">
+                <img src="img/appicon.png" alt="Image ML Annotator app icon" class="app-icon">
+                <p class="finder-caption">Image ML Annotator</p>
+            </div>
+            <div class="screenshot-frame">
+                <img src="img/screenshot1.png" alt="Image ML Annotator main window" class="hero-screenshot">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-intro">
+            <div class="section-heading">
+                <p class="eyebrow">What it does</p>
+                <h2>One page, one job: go from images to a training-ready dataset.</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Detector-first review</h3>
+                    <p>
+                        Load an optional object detector, inspect proposed rectangles, and walk through them
+                        with the keyboard before turning them into saved annotations.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3>Fast manual cleanup</h3>
+                    <p>
+                        Draw, move, resize, relabel, or delete rectangles directly on the image.
+                        User-drawn proposals stay visually distinct from detector proposals.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3>Create ML export</h3>
+                    <p>
+                        Export annotated images plus <code>annotations.json</code> into a clean folder
+                        layout for Create ML image object annotation workflows.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="workflow" class="section workflow-section">
+            <div class="section-heading">
+                <p class="eyebrow">Example Workflow</p>
+                <h2>Labeling with PuppyKittenDuckling</h2>
+            </div>
+            <div class="workflow-layout">
+                <ol class="workflow-steps">
+                    <li>
+                        <h3>Install the app</h3>
+                        <p>
+                            Get Image ML Annotator from the
+                            <a href="https://apps.apple.com/us/" target="_blank" rel="noreferrer">Apple macOS App Store</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Open the sample workflow</h3>
+                        <p>
+                            Download <strong>SampleWorkflow.zip</strong>, unzip it on your Mac, and open the included
+                            Image ML Annotator document to inspect the training set that produced the
+                            PuppyKittenDuckling detector.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Import the detector and practice images</h3>
+                        <p>
+                            Make a new Image ML Annotator document, then drop the
+                            PuppyKittenDuckling <code>.mlmodel</code> into the detector well so it can propose
+                            rectangles for you. Import the Untrained Images to see how the detector
+                            will suggest labeling.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Review proposed rectangles</h3>
+                        <p>
+                            Use detector proposals as a starting point. Press <strong>Tab</strong> to cycle
+                            through proposed rectangles and <strong>Delete</strong> to discard one you do not want.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Promote or draw</h3>
+                        <p>
+                            Press a label key to promote a proposal into a saved annotation, or draw a
+                            new violet proposal rectangle when the detector misses something.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Export and retrain</h3>
+                        <p>
+                            Export the finished annotations into a fresh folder, then point Create ML at
+                            both the original exported image set and your newly exported image set so the
+                            next training run can learn from both.
+                        </p>
+                    </li>
+                </ol>
+                <aside class="workflow-resources">
+                    <div class="section-heading compact-heading">
+                        <p class="eyebrow">Resources</p>
+                        <h2>Download the pieces behind the workflow</h2>
+                    </div>
+                    <div class="resource-grid">
+                        <a class="resource-card" href="https://apps.apple.com/us/" target="_blank" rel="noreferrer">
+                            <span class="resource-type">App Store</span>
+                            <strong>Image ML Annotator for macOS</strong>
+                            <span>Placeholder App Store listing link</span>
+                        </a>
+                        <a class="resource-card" href="resources/SampleWorkflow.zip">
+                            <span class="resource-type">Workflow Bundle</span>
+                            <strong>SampleWorkflow.zip</strong>
+                            <span>
+                                Includes the PuppyKittenDuckling model, the original training document, and a
+                                folder of untrained practice images for creating a second dataset.
+                            </span>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section callout-section">
+            <div class="callout">
+                <div>
+                    <p class="eyebrow">Made for practical labeling</p>
+                    <h2>macOS-native, keyboard-friendly, and built around getting through images quickly.</h2>
+                </div>
+                <a class="button button-primary" href="https://apps.apple.com/us/" target="_blank" rel="noreferrer">
+                    Open the App Store listing
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
