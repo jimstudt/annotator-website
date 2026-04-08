@@ -68,7 +68,8 @@
                     <h3>Create ML export</h3>
                     <p>
                         Export annotated images plus <code>annotations.json</code> into a clean folder
-                        layout for Create ML image object annotation workflows.
+                        layout for Create ML image object annotation workflows. You can also merge export
+                        into an existing exported directory to extend a corpus.
                     </p>
                 </article>
             </div>
@@ -122,9 +123,9 @@
                     <li>
                         <h3>Export and retrain</h3>
                         <p>
-                            Export the finished annotations into a fresh folder, then point Create ML at
-                            both the original exported image set and your newly exported image set so the
-                            next training run can learn from both.
+                            Export the finished annotations into a fresh folder, or "Export Into…" an
+                            existing training folder to extend it, then point Create ML at the training
+                            folder and make a new object detector.
                         </p>
                     </li>
                 </ol>
